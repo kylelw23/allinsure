@@ -5,10 +5,15 @@ export default class AdminRequestPage extends Component {
     render() {
         return (
             <>
-            <Navbar/>
-            <div className="claim-manage">
-                <div className="manage-container">
-                        <ClaimsContainer/>
+            <div style={{
+                backgroundColor:'#F2F1F1',
+                height:'2000px'
+            }}>
+                <Navbar/>
+                <div className="claim-manage">
+                    <div className="manage-container">
+                            <ClaimsContainer/>
+                    </div>
                 </div>
             </div>
             </>

@@ -1,17 +1,34 @@
-import React, {useState, useEffect} from 'react'
+import React, {Component, useState, useEffect} from 'react'
 import ClaimsList from './ClaimsList'
+import Claim from './Claim'
 import ClaimsFilter from './ClaimsFilter';
-import firebase from 'firebase/app';
-import {connect, useSelector} from 'react-redux';
-import {firestoreConnect, useFirebaseConnect, firebaseConnect} from 'react-redux-firebase';
+import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
+import {connect} from 'react-redux';
 
-export default function ClaimsContainer(){
-    return(
+class ClaimsContainer extends Component{
+    
+    render(){
+        return(
         <>
             <ClaimsFilter/>
             <div className="manage-list">
+            <ClaimsList/>
             </div>
         </>
     );
+    }
+    
 }
+
+const mapStateToProps = (state) => {
+    return{
+        claims: state.firestore.ordered
+    }
+}
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'claim' }
+    ])
+)(ClaimsContainer)

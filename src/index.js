@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createBrowserHistory} from 'history';
 import {BrowserRouter as Router} from 'react-router-dom'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -9,10 +8,12 @@ import rootReducer from './store/reducers/rootReducer';
 import {Provider } from 'react-redux';
 import firebase from 'firebase/app';
 import thunk from 'redux-thunk';
-import { reduxFirestore, getFirestore } from 'redux-firestore';
+import { createFirestoreInstance, reduxFirestore, getFirestore } from 'redux-firestore';
 import { ReactReduxFirebaseProvider , getFirebase } from 'react-redux-firebase';
 import fbConfig from './config/fbConfig';
-const rrfConfig = { userProfile: 'users' }
+import 'firebase/firestore'
+const rrfConfig = { userProfile: 'users',
+useFirestoreForProfile: true }
 // applyMiddleware return store enhancer
 // we will combine several store enhancer together
 const store = createStore(rootReducer, 
@@ -25,7 +26,7 @@ const rrfProps = {
     firebase,
     config: rrfConfig,
     dispatch: store.dispatch,
-    // createFirestoreInstance // <- needed if using firestore
+    createFirestoreInstance // <- needed if using firestore
   }
         ReactDOM.render(
             <Provider store={store}>

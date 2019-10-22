@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 import {Link} from 'react-router-dom';
 const SignedInLinks = (props) => {
-    console.log(props);
         return (
             <>
             <ul>

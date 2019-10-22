@@ -4,7 +4,8 @@ import claimReducer from './claimReducer';
 import { combineReducers } from 'redux';
 import { firestoreReducer } from 'redux-firestore';
 import { firebaseReducer} from 'react-redux-firebase';
-import { connectRouter } from 'connected-react-router';
+
+import 'firebase/firestore'
     // update the auth and claim reducer to rootReducer property
 const rootReducer = combineReducers({
     auth: authReducer,

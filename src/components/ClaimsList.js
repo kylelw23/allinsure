@@ -1,8 +1,28 @@
-import React from 'react'
-import Claim from './Claim'
-// import { isTemplateElement } from '@babel/types'
-export default function ClaimList({claims}) {
-    if(claims.length ===0){
+import React, {useState, useEffect} from 'react';
+import Claim from './Claim';
+import firebase from 'firebase/app';
+function useTimes(){
+    const [times, setTimes] = useState([])
+
+    useEffect(() => {
+        const unsubscribe = firebase
+            .firestore()
+            .collection('claim')
+            .onSnapshot(
+                (snapshot) => {
+                    const newTimes = snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data()
+                    }))
+                    setTimes(newTimes)
+                })
+            return () => unsubscribe();
+    }, [])
+    return times
+}
+export default function ClaimList() {
+    const claims = useTimes();
+    if(claims.length === 0){
         return <div className="empty-search"> 
         <h3 style={{color:'black'}}>Unfortunately no rooms matched your search parameters</h3>
         </div>
