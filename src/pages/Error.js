@@ -18,7 +18,7 @@ export default function Error() {
                 <div className="nav-space"></div>
         </nav>
         <div className="page-not-found">
-            <div className="page-not-found2">
+            <div className="page-not-found2 m-t-100">
                 <h2>Sorry! The page that are you looking for does not exist</h2>
             <div className="page-not-found3 m-t-50">
             <Link className="page-not-found-btn" to='/'>Our Home Page!</Link>

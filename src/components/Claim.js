@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types';
 // import claimDetail here
+import ClaimDetail from '../pages/ClaimDetail';
 // pass room into <ClaimDetail />
 export default function Claim({room}) {
     console.log(room);
@@ -20,25 +21,25 @@ export default function Claim({room}) {
                     <p className="claim-name">{authorFirstName + ` ` + authorLastName} - Policy Number: {id}</p>
                 </div>
                 <div style={{
-                    width:'400px',float:'left'
+                    width:'330px',float:'left'
                 }}>
                     <p className="claim-info m-l-30 m-t-5 ">Policy type: CTP Car insurance</p>
-                    <p className="claim-info m-l-40">Crash type: {eventDescription} at {eventLocation}</p>
-                    <p className="claim-info m-l-40">Licence type: {licence} / {licenceLength} Years</p>
+                    <p className="claim-info m-l-30">Crash type: {eventDescription} at {eventLocation}</p>
+                    <p className="claim-info m-l-30">Licence type: {licence} / {licenceLength} Years</p>
                 </div>
                 <div className="container-claim-buttons" style={{
                 }}>
-                    <div className="claim-button-list p-t-5 m-r-20 m-l-20">
-                        <Link style={{color:"white", fontSize:'20px'}} to={`/claims/${id}`}>
+                    <div className="claim-button-list p-t-5 m-r-14 m-l-20">
+                        <Link style={{color:"white", fontSize:'20px'}} to={`/admin-login/admin-request/${id}`}>
                             Detail >
                         </Link>
                     </div>
-                    <div className="claim-button-list p-t-5 m-r-20 m-l-20 m-b-20">
+                    <div className="claim-button-list p-t-5 m-r-6 m-l-20 m-b-20">
                         <Link style={{color:"white", fontSize:'20px'}} to={`/claims/${id}`}>
                             Accept >
                         </Link>
                     </div>
-                    <div className="claim-button-list p-t-5 m-r-20 m-l-20 m-b-20">
+                    <div className="claim-button-list p-t-5 m-r-6 m-l-20 m-b-20">
                         <Link style={{color:"white", fontSize:'20px'}} to={`/claims/${id}`}>
                             Reject >
                         </Link>

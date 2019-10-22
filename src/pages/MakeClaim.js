@@ -18,7 +18,7 @@ class MakeClaim extends Component {
         e.preventDefault();
         console.log(this.state);
         this.props.createClaim(this.state);
-
+        this.props.history.push('/User-Login/UserHomePage/MakeClaimSuccess');
     }
     render() {
         const {auth} = this.props;

@@ -18,7 +18,8 @@ import UserLogin from './pages/UserLogin';
 import AdminRequestPage from './pages/AdminRequestPage';
 import ClaimDetail from './pages/ClaimDetail'
 import UserHomePage from './pages/UserHomePage';
-import MakeClaim from './pages/MakeClaim'
+import MakeClaim from './pages/MakeClaim';
+import MakeClaimSuccess from './pages/MakeClaimSuccess';
 import NoMatch from './pages/Error';
 import {Route, Switch} from 'react-router-dom';
 
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/Register" component={Register}/>
           <Route exact path='/User-Login/UserHomePage' component={UserHomePage}/>
           <Route exact path="/User-Login/UserHomePage/MakeClaim" component={MakeClaim}/>
+          <Route exact path="/User-Login/UserHomePage/MakeClaimSuccess" component={MakeClaimSuccess}/>
           <Route component={NoMatch}/>
         </Switch>
     </React.Fragment>

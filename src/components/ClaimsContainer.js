@@ -7,7 +7,6 @@ import {compose} from 'redux';
 import {connect} from 'react-redux';
 
 class ClaimsContainer extends Component{
-    
     render(){
         return(
         <>
