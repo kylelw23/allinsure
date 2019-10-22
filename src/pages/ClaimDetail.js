@@ -55,7 +55,7 @@ const ClaimDetail = (props) => {
                 <div className="claim-detail m-t-150 m-l-100">
                     <div className="claim-detail-left">
                         <h2>Customer: {authorFirstName} {authorLastName}</h2>
-    
+                        <h2>Age: 19 years old</h2>
                     </div>
                     <div className="claim-detail-right">
                         <h2>Policy Number: {id}</h2>
