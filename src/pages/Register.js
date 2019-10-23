@@ -4,7 +4,7 @@ class Register extends Component {
     render(){
         return (
             <>
-            <div class="limiter">
+            <div className="limiter">
                 <SignUp/>
             </div>
             </>

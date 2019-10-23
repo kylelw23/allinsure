@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 import ClaimsContainer from '../components/ClaimsContainer'
-export default class AdminRequestPage extends Component {
+import {Link, Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
+class AdminRequestPage extends Component {
     render() {
+        const {auth} = this.props;
+        if(!auth.uid){
+            return <Redirect to='/'/>
+        }
         return (
             <>
                 <Navbar/>
@@ -15,3 +21,10 @@ export default class AdminRequestPage extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+        auth: state.firebase.auth
+    }
+}
+export default connect(mapStateToProps)(AdminRequestPage)

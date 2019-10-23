@@ -35,12 +35,12 @@ export default function Claim({room}) {
                         </Link>
                     </div>
                     <div className="claim-button-list p-t-5 m-r-6 m-l-20 m-b-20">
-                        <Link style={{color:"white", fontSize:'20px'}} to={`/claims/${id}`}>
+                        <Link style={{color:"white", fontSize:'20px'}} >
                             Accept >
                         </Link>
                     </div>
                     <div className="claim-button-list p-t-5 m-r-6 m-l-20 m-b-20">
-                        <Link style={{color:"white", fontSize:'20px'}} to={`/claims/${id}`}>
+                        <Link style={{color:"white", fontSize:'20px'}}>
                             Reject >
                         </Link>
                     </div>

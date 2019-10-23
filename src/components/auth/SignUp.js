@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {signUp} from '../../store/actions/authActions';
 
-export default class SignUp extends Component {
+class SignUp extends Component {
     state = {
         email: '',
         password: ''
@@ -13,71 +15,71 @@ export default class SignUp extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.signUp(this.state);
     }
     render() {
         return (
             
-            <div class="container-login">
-            <div class="wrap-login1 p-l-55 p-r-55 p-t-40 p-b-">
-                <form onSubmit={this.handleSubmit} class="login-form validate-form">
-                    <span class="login-form-title m-b-20">
+            <div className="container-login">
+            <div className="wrap-login1 p-l-55 p-r-55 p-t-40 p-b-">
+                <form onSubmit={this.handleSubmit} className="login-form validate-form">
+                    <span className="login-form-title m-b-20">
                         Sign Up
                     </span>
-                    <div class="wrap-input validate-input m-b-23" data-validate="Username is required">
-                        <span class="label-input">First Name</span>
-                        <input class="input" 
+                    <div className="wrap-input validate-input m-b-23" data-validate="Username is required">
+                        <span className="label-input">First Name</span>
+                        <input className="input" 
                         type="text" 
                         id="firstname"
                         placeholder="Type your first name"
                         onChange={this.handleChange}
                         />
-                        <span class="focus-input" data-symbol="&#xf206;"></span>
+                        <span className="focus-input" data-symbol="&#xf206;"></span>
                     </div>
-                    <div class="wrap-input validate-input m-b-23" data-validate="Username is required">
-                        <span class="label-input">Last Name</span>
-                        <input class="input" 
+                    <div className="wrap-input validate-input m-b-23" data-validate="Username is required">
+                        <span className="label-input">Last Name</span>
+                        <input className="input" 
                         type="text" 
                         id="lastname"
                         placeholder="Type your last name"
                         onChange={this.handleChange}
                         />
-                        <span class="focus-input" data-symbol="&#xf206;"></span>
+                        <span className="focus-input" data-symbol="&#xf206;"></span>
                     </div>
-                    <div class="wrap-input validate-input m-b-23" data-validate="Username is required">
-                        <span class="label-input">Email</span>
-                        <input class="input" 
+                    <div className="wrap-input validate-input m-b-23" data-validate="Username is required">
+                        <span className="label-input">Email</span>
+                        <input className="input" 
                         type="email" 
                         id="email" 
                         placeholder="Type your email"
                         onChange={this.handleChange}
                         />
-                        <span class="focus-input" data-symbol="&#xf206;"></span>
+                        <span className="focus-input" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input validate-input m-b-23" data-validate="Password is required">
-                        <span class="label-input">Password</span>
-                        <input class="input" 
+                    <div className="wrap-input validate-input m-b-23" data-validate="Password is required">
+                        <span className="label-input">Password</span>
+                        <input className="input" 
                         type="password" 
                         id="password" 
                         placeholder="Type your password"
                         onChange={this.handleChange}
                         />
-                        <span class="focus-input" data-symbol="&#xf190;"></span>
+                        <span className="focus-input" data-symbol="&#xf190;"></span>
                     </div>
                     <input type="checkbox" name="agree-term" id="remember-me" className="agree-term"/>
-                    <label for="agree-term" class="label-agree-term"><span></span>I agree to the terms and conditions. </label>
-                    
-                    <div class="container-login-form-btn m-t-30">
-                        <div class="wrap-login-form-btn">
-                            <div class="login-form-bgbtn"></div>
-                            <button class="login-form-btn" type="submit">
+                    <label htmlFor="agree-term" className="label-agree-term"><span></span>I agree to the terms and conditions. </label>
+                
+                    <div className="container-login-form-btn m-t-30">
+                        <div className="wrap-login-form-btn">
+                            <div className="login-form-bgbtn"></div>
+                            <button className="login-form-btn" type="submit">
                                 Sign Up
                             </button>
                         </div>
                     </div>
-                    <div class="flex-col-c p-t-10 p-b-30">
-                        <Link to="/user-login" class="txt2">
+                    <div className="flex-col-c p-t-10 p-b-30">
+                        <Link to="/user-login" className="txt2">
                             Already Have An Account?
                         </Link>
                     </div>
@@ -87,3 +89,11 @@ export default class SignUp extends Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        signUp: (newUser) => dispatch(signUp(newUser))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SignUp)
