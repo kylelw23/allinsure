@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
@@ -8,10 +8,10 @@ const SignedInLinks = (props) => {
             <>
             <ul>
             <li>
-                <Link to="/admin-login/admin-home-page">Home</Link>
+                <Link to="/admin-login/admin-home-page" style={{textDecoration:'none'}}>Home</Link>
             </li>
             <li>
-                <Link to="/admin-login/admin-request">Request</Link>
+                <Link to="/admin-login/admin-request" style={{textDecoration:'none'}}>Request</Link>
             </li>
             </ul>
             <ul className="right">

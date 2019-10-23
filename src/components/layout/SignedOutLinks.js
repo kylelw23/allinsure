@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom';
-import {Redirect} from 'react-router-dom';
-import { createHashHistory } from 'history'
 class SignedOutLinks extends Component {
     render(){
         return (

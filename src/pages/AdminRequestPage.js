@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 import ClaimsContainer from '../components/ClaimsContainer'
-import {Link, Redirect} from 'react-router-dom';
+import { Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 class AdminRequestPage extends Component {
     render() {

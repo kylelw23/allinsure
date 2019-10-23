@@ -1,6 +1,5 @@
-import React, {Component, useState, useEffect} from 'react'
+import React, {Component} from 'react'
 import ClaimsList from './ClaimsList'
-import Claim from './Claim'
 import ClaimsFilter from './ClaimsFilter';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';

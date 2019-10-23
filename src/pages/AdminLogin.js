@@ -3,9 +3,7 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import Navbar from '../components/Navbar';
 import {signIn} from '../store/actions/authActions';
-import { createHashHistory} from 'history';
 // import PropTypes from 'prop-types';
-const history = createHashHistory();
 class AdminLogin extends Component {
     state = {
         email: '',

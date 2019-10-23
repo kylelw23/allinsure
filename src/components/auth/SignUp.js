@@ -6,7 +6,9 @@ import {signUp} from '../../store/actions/authActions';
 class SignUp extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        firstName: '',
+        lastName:''
     }
     handleChange = (e) => {
         this.setState({
@@ -89,11 +91,15 @@ class SignUp extends Component {
         )
     }
 }
-
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
 const mapDispatchToProps = (dispatch) => {
     return{
         signUp: (newUser) => dispatch(signUp(newUser))
     }
 }
 
-export default connect(null, mapDispatchToProps)(SignUp)
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)

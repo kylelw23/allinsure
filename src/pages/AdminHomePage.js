@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar';
-import {Link, Redirect} from 'react-router-dom';
+import { Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 class AdminHomePage extends Component {
     render() {

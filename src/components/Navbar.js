@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import LogoImg from "../logo/logo(transparent).png";
-import {Link} from 'react-router-dom';
 import SignedInLinks from './layout/SignedInLinks';
 import SignedOutLinks from './layout/SignedOutLinks';
 import { connect } from 'react-redux';

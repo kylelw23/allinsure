@@ -181,9 +181,21 @@ transition: all 0.4s;
   height:50px;
   display:block;
   background-color:#FE5F55;
+  transition: all 0.3s ease 0s;
   border-radius:8px;
 }
+.orange-btn:hover{
+  text-decoration: none;
+  color:#fff;
+  transition: all 0.3s ease 0s;
+  border-radius: 50px;
+  cursor: pointer;
+}
 .log-out-btn:hover{
+  text-decoration: none;
+  color:#fff;
+  transition: all 0.3s ease 0s;
+  border-radius: 50px;
   cursor: pointer;
 }
 a:focus {
@@ -347,7 +359,10 @@ color: #cccccc;
 text-transform: uppercase;
 margin-left:130px;
 }
-
+.tx3:hover{
+  text-decoration:none;
+  color:#fff;
+}
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 .red-text{
@@ -533,11 +548,8 @@ margin-top:20px;
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #73a8fd;
-  background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: #a64bf4;
+  background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
   top: 0;
   left: -100%;
 
@@ -565,7 +577,10 @@ margin-top:20px;
   width: 100%;
   height: 50px;
 }
-
+.login-form-btn:hover{
+  color: #fff;
+  text-decoration:none;
+}
 .wrap-login-form-btn:hover .login-form-bgbtn {
   left: 0;
 }

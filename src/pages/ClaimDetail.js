@@ -1,10 +1,10 @@
-import React,{Component, useState, useEffect} from 'react';
+import React,{ useState, useEffect} from 'react';
 import Navbar from '../components/Navbar';
 import firebase from 'firebase/app';
 import { firestoreConnect } from 'react-redux-firebase';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
-import {Link, Redirect} from 'react-redux-firebase';
+import { Redirect} from 'react-redux-firebase';
 function useTimes(){
     const [claims, setClaims] = useState([])
 
@@ -30,15 +30,13 @@ const ClaimDetail = (props) => {
     const object = claims.filter(item => {
         if(id === item.id){
              return item;
-        }
+        }else{return null;}
     })
     var goBack = () => {
         props.history.push('/admin-login/admin-request');
     }
-    console.log(props);
     // destructering
     const {claim} = props;
-    
     const {auth} = props;
         if(!auth.uid){
             return <Redirect to='/'/>
@@ -51,7 +49,7 @@ const ClaimDetail = (props) => {
                 
                 <div style={{width:'100%',height:'50px'}}>
                     <div className="detail-back-btn p-l-20 p-t-4">
-                        <button onClick={goBack} style={{
+                        <button className="orange-btn" onClick={goBack} style={{
                             color:'white',
                             fontSize:'24px'
                         }}>&lt; Back</button>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import LogoImg from "../logo/logo(transparent).png";
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import SignedInLinks from '../components/layout/SignedInLinks';
 import { createClaim } from '../store/actions/claimActions';
 import { connect } from 'react-redux';
-import firebase from '../config/fbConfig';
+
 class MakeClaim extends Component {
     state ={
         alcohol: false
@@ -16,12 +16,13 @@ class MakeClaim extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
         this.props.createClaim(this.state);
         this.props.history.push('/User-Login/UserHomePage/MakeClaimSuccess');
     }
     render() {
         const {auth} = this.props;
+        const {name} = this.props;
+        console.log(name);
         if(!auth.uid){
             return <Redirect to='/'/>
         }
@@ -40,7 +41,7 @@ class MakeClaim extends Component {
             </nav> 
             <div className="make-claim-container">
                 <div className="user-greeting">
-                    <h3>Greeting Khoa!</h3>
+                    <h3>Greeting {name.firstName + ` ` + name.lastName}!</h3>
                 </div>
                 <div className="clear"></div>
                 <div className="container-claim-input">
@@ -235,9 +236,9 @@ class MakeClaim extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
+        name: state.firebase.profile
     }
 }
 const mapDispatchToProps = (dispatch) => {

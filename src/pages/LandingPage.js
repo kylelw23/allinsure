@@ -17,17 +17,17 @@ export default function LandingPage() {
 			<div className="container-login-form-btn">
 				<div className="wrap-login-form-btn">
 					<div className="login-form-bgbtn"></div>
-					<Link to='/User-Login'className="login-form-btn">Make a quote</Link>
+					<Link to='/User-Login' className="login-form-btn">Make a quote</Link>
 				</div>
 			</div>
 			<div className="container-login-form-btn m-t-30">
 				<div className="wrap-login-form-btn">
 					<div className="login-form-bgbtn"></div>
-					<Link to='/User-Login'className="login-form-btn">Claim your insurance</Link>
+					<Link to='/User-Login' className="login-form-btn">Claim your insurance</Link>
 				</div>
 			</div>
 			<div className="admin-login">
-				<Link to="/admin-login" className="txt3">
+				<Link to="/admin-login" className="txt3" style={{textDecoration:'none'}}>
 					For administration
 				</Link>
 			</div>

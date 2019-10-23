@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LogoImg from "../logo/logo(transparent).png";
 import Steering from "../image/steering.jpg";
 import {Link, Redirect, NavLink} from 'react-router-dom';
@@ -17,16 +17,16 @@ const UserHomePage = (props) => {
                 </div>
                 <ul>
                    <li>
-                       <Link style={{color:'#529AEE'}} to="/">Insurance</Link>
+                       <Link style={{color:'#529AEE'}} style={{textDecoration:'none'}} to="/">Insurance</Link>
                    </li>
                    <li>
-                       <Link style={{color:'#529AEE'}} to="/">Claims</Link>
+                       <Link style={{color:'#529AEE'}} style={{textDecoration:'none'}} to="/">Claims</Link>
                    </li>
                    <li>
-                       <Link style={{color:'#529AEE'}} to="/">Renewals</Link>
+                       <Link style={{color:'#529AEE'}} style={{textDecoration:'none'}} to="/">Renewals</Link>
                    </li>
                    <li>
-                       <Link style={{color:'#529AEE'}} to="/">Contact Us</Link>
+                       <Link style={{color:'#529AEE'}} style={{textDecoration:'none'}} to="/">Contact Us</Link>
                    </li>
                </ul>
                
@@ -44,10 +44,10 @@ const UserHomePage = (props) => {
                     <h5>Choose from our range of car insurance and find the cover that's right for you</h5>
                     <div className="quote-claim-btn-container">
                         <div className="getQuote-btn-container p-b-20">
-                            <Link className="getQuote-btn m-t-100"to="/">Get a quote</Link>
+                            <Link className="getQuote-btn m-t-100" style={{textDecoration:'none'}} to="/">Get a quote</Link>
                         </div>
                         <div className="mk-claim-btn-container">
-                            <Link className="mk-claim-btn" to="/User-Login/UserHomePage/MakeClaim">Get a claim</Link>
+                            <Link className="mk-claim-btn" to="/User-Login/UserHomePage/MakeClaim" style={{textDecoration:'none'}}>Get a claim</Link>
                         </div>
                     </div>
                 </div>

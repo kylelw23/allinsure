@@ -1,7 +1,8 @@
 import React from 'react'
-import {Link, Redirect} from 'react-router-dom';
+import { Redirect} from 'react-router-dom';
 import LogoImg from "../logo/logo(transparent).png";
 import {connect} from 'react-redux';
+import { signOut } from '../store/actions/authActions';
 
 function MakeClaimSuccess(props) {
     const {auth} = props;
@@ -29,7 +30,7 @@ function MakeClaimSuccess(props) {
                 <h2>Congratulation! Your claims form has been successfully lodged into our system!</h2>
                 <h4 className="m-t-10">Our agency will contact you as soon as possible after accepting your claim</h4>
             <div className="page-not-found3 m-t-30">
-            <Link className="page-not-found-btn" to='/'>Our Home Page</Link>
+            <button className="page-not-found-btn" onClick={props.signOut}>Our Home Page</button>
             </div>
             </div>
         </div>
@@ -41,5 +42,9 @@ const mapStateToProps = (state) => {
         auth: state.firebase.auth
     }
 }
-// pass to claimActions
-export default connect(mapStateToProps)(MakeClaimSuccess)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signOut: () => dispatch(signOut())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(MakeClaimSuccess);
