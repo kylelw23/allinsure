@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d8e3369.chunk.css",
+    "main.js": "/static/js/main.f7d931d8.chunk.js",
+    "main.js.map": "/static/js/main.f7d931d8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f81c2b92.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f81c2b92.js.map",
+    "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
+    "static/js/2.4b8ec459.chunk.js": "/static/js/2.4b8ec459.chunk.js",
+    "static/js/2.4b8ec459.chunk.js.map": "/static/js/2.4b8ec459.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fc9a52e0b62995be41d9319352a8be61.js": "/precache-manifest.fc9a52e0b62995be41d9319352a8be61.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.5d8e3369.chunk.css.map": "/static/css/main.5d8e3369.chunk.css.map",
+    "static/media/App.css": "/static/media/Poppins-SemiBold.e63b93df.ttf",
+    "static/media/material-design-iconic-font.min.css": "/static/media/Material-Design-Iconic-Font.d2a55d33.woff",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/steering.jpg": "/static/media/steering.8b424294.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f81c2b92.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.4b8ec459.chunk.js",
+    "static/css/main.5d8e3369.chunk.css",
+    "static/js/main.f7d931d8.chunk.js"
+  ]
+}

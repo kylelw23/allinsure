@@ -18,3 +18,17 @@ export const createClaim = (claim) => {
         })
     }
 };
+
+// export const rejectClaim = (claim) => {
+//     (dispatch, { getFirestore }) => {
+//         const firestore = getFirestore();
+
+//         firestore.collection('claim').doc(claim.id).update({
+//             rejected: 'yes',
+//         }).then(() => {
+//             dispatch({type: 'REJECT_CAIM', claim});
+//         }).catch((err) => {
+//             dispatch({type: 'REJECT_CLAIM_ERROR', err});
+//         })
+//     }
+// }

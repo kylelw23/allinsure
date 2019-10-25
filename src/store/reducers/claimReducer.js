@@ -12,6 +12,12 @@ const claimReducer = (state = initState, action) => {
         case 'CREATE_CLAIM_ERROR':
             console.log('Create project error', action.err);
             return state;
+        case 'REJECT_CLAIM':
+            console.log('Create project error', action.err);
+            return state;
+        case 'REJECT_CLAIM_ERROR':
+            console.log('Create project error', action.err);
+            return state;
         default: 
             return state;
     }
